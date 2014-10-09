@@ -1,0 +1,167 @@
+
+$color-bkground: #222222;
+$color-frground: #cccccc;
+$color-gray:     #777777;
+$color-dgray:    #555555;
+
+$color-yellow  : #EEED7A;
+$color-orange  : #EED37A;
+$color-red     : #EE807A;
+$color-magenta : #EEB47A;
+$color-purple  : #AA86C0;
+$color-blue    : #928FC6;
+$color-cyan    : #7EACB7;
+$color-green   : #5FB96A;
+
+$color-dyellow  : #C8C649;
+$color-dorange  : #C8AA49;
+$color-dred     : #C84F49;
+$color-dmagenta : #C88849;
+$color-dpurple  : #8356A0;
+$color-dblue    : #6460A6;
+$color-dcyan    : #4E8694;
+$color-dgreen   : #389B45;
+
+body {
+	background:$color-bkground;
+	color: $color-frground; 
+}
+
+%square {
+  width:10%;
+  margin:0.5em 1%;
+  height:2em;
+  display:inline-block;
+  border:1px solid;
+  border-color:black;
+}
+
+.sq-yellow {@extend %square; background:$color-yellow ; }   
+.sq-orange {@extend %square; background:$color-orange ; }   
+.sq-red    {@extend %square; background:$color-red    ; }   
+.sq-magenta{@extend %square; background:$color-magenta; }   
+.sq-purple {@extend %square; background:$color-purple ; }   
+.sq-blue   {@extend %square; background:$color-blue   ; }   
+.sq-cyan   {@extend %square; background:$color-cyan   ; }   
+.sq-green  {@extend %square; background:$color-green  ; }   
+
+.sq-dyellow {@extend %square; background:$color-dyellow ; }   
+.sq-dorange {@extend %square; background:$color-dorange ; }   
+.sq-dred    {@extend %square; background:$color-dred    ; }   
+.sq-dmagenta{@extend %square; background:$color-dmagenta; }   
+.sq-dpurple {@extend %square; background:$color-dpurple ; }   
+.sq-dblue   {@extend %square; background:$color-dblue   ; }   
+.sq-dcyan   {@extend %square; background:$color-dcyan   ; }   
+.sq-dgreen  {@extend %square; background:$color-dgreen  ; }   
+
+.sq-dblack  {@extend %square; background:$color-bkground; }
+.sq-lblack  {@extend %square; background:$color-gray; }   
+.sq-dgray   {@extend %square; background:$color-gray ; }   
+.sq-lgray   {@extend %square; background:$color-gray   ; }   
+.sq-dwhite  {@extend %square; background:$color-gray   ; }   
+.sq-lwhite  {@extend %square; background:$color-frground  ; }   
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: $color-bkground;
+  font-family: Menlo, Monaco, 'Andale Mono', 'Lucida Console', 'Courier New', monospace;
+  -webkit-text-size-adjust: none;
+  color: $color-frground;
+}
+
+.hljs-comment{
+  color: $color-gray;
+}
+.hljs-title {
+  color: $color-frground;
+}
+
+.hljs-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-regexp,
+.ruby .constant,
+.xml .tag .title,
+.xml .pi,
+.xml .doctype,
+.html .doctype {
+  color: $color-red;
+}
+
+.css .value {
+  color: $color-blue;
+}
+
+.hljs-number,
+.hljs-string,
+.css .value .function,
+.css .value .string {
+  color: $color-dred;
+}
+
+.hljs-params,
+.css .value .number {
+  color: $color-cyan;
+}
+
+.css .id,
+.css .class,
+.css-pseudo,
+.css .selector,
+.css .tag {
+  color: $color-orange;
+}
+
+.hljs-preprocessor,
+.hljs-built_in,
+.hljs-literal,
+.hljs-constant {
+  color: $color-blue;
+}
+
+.ruby .class .title,
+.css .rules .attribute {
+  color: $color-gray;
+}
+
+.hljs-value,
+.hljs-inheritance,
+.hljs-header,
+.ruby .symbol,
+.xml .cdata {
+  color: $color-frground;
+}
+
+.css .hexcolor {
+  color: $color-gray;
+}
+
+.function,
+.python .decorator,
+.python .title,
+.ruby .function .title,
+.ruby .title .keyword,
+.perl .sub,
+.javascript .title,
+.coffeescript .title {
+  color: $color-green;
+}
+
+.hljs-keyword,
+.javascript .function {
+  color: $color-green;
+}
+
+.coffeescript .javascript,
+.javascript,
+.javascript .xml,
+.tex .formula,
+.xml .javascript,
+.xml .vbscript,
+.xml .css,
+.xml .cdata {
+    background: transparent;
+    opacity: 1;
+}
