@@ -11,27 +11,27 @@
 *foreground: {{gray7}}
 
 ! Black + DarkGrey
-*color0:  {{gray01}}
-*color8:  {{gray02}}
+*color0:  {{gray1}}
+*color8:  {{gray2}}
 ! DarkRed + Red
-*color1:  {{col1}}
-*color9:  {{col1d}}
+*color1:  {{col0d}}
+*color9:  {{col0l}}
 ! DarkGreen + Green
-*color2:  #98971a
-*color10: #b8bb26
+*color2:  {{col2d}}
+*color10: {{col2l}}
 ! DarkYellow + Yellow
-*color3:  #d79921
-*color11: #fabd2f
+*color3:  {{col1d}}
+*color11: {{col1l}}
 ! DarkBlue + Blue
-*color4:  #458588
-!*color4:  #076678
+*color4:  {{col5d}}
+!*color4: {{col5l}}
 *color12: #83a598
 ! DarkMagenta + Magenta
-*color5:  #b16286
-*color13: #d3869b
+*color5:  {{col7d}}
+*color13: {{col7l}}
 ! DarkCyan + Cyan
-*color6:  #689d6a
-*color14: #8ec07c
+*color6:  {{col4d}}
+*color14: {col4l}
 ! LightGrey + White
-*color7:  #a89984
-*color15: #ebdbb2
+*color7:  {{gray5}}
+*color15: {{gray6}}
