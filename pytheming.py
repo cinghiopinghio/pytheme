@@ -2,30 +2,22 @@
 
 import configobj
 import pystache
-from opterator import opterate
 import os
+import argparse
 
-@opterate
-def main(colors='default.ini',template='templates',outdir='output'):
-    """Theming
-
-    :param colors: theme ini file
-    :param template: template file or folder
-    :param outdir: dir where theme files should go
-    """
-
-    if os.path.isfile(colors):
-        cols = configobj.ConfigObj(colors)
+def main(args):
+    if os.path.isfile(args.palette):
+        cols = configobj.ConfigObj(args.palette)
     else:
-        print ('error: no such file', colors)
+        print ('error: no such file', args.palette)
         exit(20)
 
-    if os.path.isdir(template):
-        tfiles = os.listdir(template)
-        tfileslong = [template+'/'+t for t in tfiles]
-        tfilesout = [outdir+'/'+t for t in tfiles]
+    if os.path.isdir(args.template):
+        tfiles = os.listdir(args.template)
+        tfileslong = [args.template+'/'+t for t in tfiles]
+        tfilesout = [args.outdir+'/'+t for t in tfiles]
     else:
-        print ('error: no such dir', template)
+        print ('error: no such dir', args.template)
         exit(28)
 
     for tmpl,outf in zip(tfileslong,tfilesout):
@@ -35,5 +27,15 @@ def main(colors='default.ini',template='templates',outdir='output'):
             fout.write(pystache.render(t,cols))
 
 if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description='Create themes from\
+                                     palette and templates')
+    parser.add_argument('-p','--palette', default='default.ini',\
+                        help='file with color palette')
+    parser.add_argument('-t','--template',default='templates',\
+                        help='template file or folder')
+    parser.add_argument('-o','--outdir',default='output',\
+                        help='folder where to store themes')
 
-    main()
+    args=parser.parse_args()
+
+    main(args)
