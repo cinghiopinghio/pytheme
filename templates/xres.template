@@ -31,7 +31,7 @@
 *color13: {{col7l}}
 ! DarkCyan + Cyan
 *color6:  {{col4d}}
-*color14: {col4l}
+*color14: {{col4l}}
 ! LightGrey + White
 *color7:  {{gray5}}
 *color15: {{gray6}}
